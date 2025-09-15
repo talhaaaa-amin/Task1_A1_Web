@@ -387,7 +387,7 @@ select:focus {
 
 .main {
   flex: 1;
-  pad: 20px;
+  padding: 20px;
 }
 @media screen and (min-width: 1024px) {
   .row {
