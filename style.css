@@ -1,0 +1,421 @@
+/* Technologies Used Comma List Style */
+.tech-used {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0.5em 0 0.5em 0;
+  letter-spacing: 0.2px;
+}
+.tech-used {
+  /* Optional: highlight each tech */
+}
+* {
+  box-sizing: border-box;
+}
+#aboutme {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color, #2c3e50);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#about-me:hover {
+  transform: translateY(-4px);
+}
+
+#aboutmeparagraph {
+  font-size: 1rem;
+  color: var(--text-color, #222);
+  background: var(--card-bg, #f9f9f9);
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  margin: 0 auto 1.5em auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  line-height: 1.7;
+  text-align: center;
+}
+#full_name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5em 0 0.2em 0;
+  color: var(--primary-color, #2c3e50);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#job_Title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 1em 0;
+  color: var(--secondary-color, #3498db);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+#talha_jpg {
+  width: 100%;
+  max-width: 150px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contactul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", serif;
+}
+
+#contactul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 0.6em 0.5em;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+#contactul li {
+  margin-bottom: 0.1em;
+  text-align: center;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+#contactul li:hover {
+  opacity: 1;
+}
+
+#contactul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--secondary-color, #3498db) 20%, transparent),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+#contactul li a:hover::before {
+  left: 100%;
+}
+
+#contactul li a:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--secondary-color, #3498db) 15%,
+    transparent 85%
+  );
+  color: var(--secondary-color, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+#contactul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color, #3498db);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+#contactul li a:hover::after {
+  width: 80%;
+}
+
+a:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+button:focus,
+.button:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+#contactul li a:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+  background-color: color-mix(
+    in srgb,
+    var(--secondary-color, #3498db) 20%,
+    transparent 80%
+  );
+  color: var(--secondary-color, #3498db);
+  text-decoration: none;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.checkbox-label:focus-within {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+  border-radius: 50px;
+}
+
+#ulskills {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", serif;
+}
+#ulskills li {
+  margin-bottom: 14px;
+}
+.progressbar {
+  border: 4px solid var(--card-bg);
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  height: var(--progressbar-height, 30px);
+  width: var(--progressbar-width, 250px);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.progressbar:hover {
+  box-shadow: 0 0 12px 2px
+    color-mix(in srgb, var(--quaternary-color, #d97706) 40%, transparent 60%);
+  border-color: var(--quaternary-color, #d97706);
+}
+#progressbar1 {
+  background-color: var(--success-color);
+  height: 100%;
+  width: 80%;
+  border-radius: 12px;
+  animation: progressbar1 4s forwards;
+  transition: background-color 0.3s;
+}
+#progressbar1:hover {
+  background-color: var(--senary-color);
+}
+@keyframes progressbar1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+#progressbar1::after {
+  content: "80%"; /* Match this with the width percentage */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#progressbar2 {
+  background-color: var(--success-color);
+  height: 100%;
+  width: 80%;
+  border-radius: 12px;
+  animation: progressbar2 4s forwards;
+  transition: background-color 0.3s;
+}
+#progressbar2:hover {
+  background-color: var(--senary-color);
+}
+@keyframes progressbar2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+#progressbar2::after {
+  content: "90%";
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#progressbar3 {
+  background-color: var(--success-color);
+  height: 100%;
+  width: 80%;
+  border-radius: 12px;
+  animation: progressbar3 4s forwards;
+  transition: background-color 0.3s;
+}
+#progressbar3:hover {
+  background-color: var(--senary-color);
+}
+@keyframes progressbar3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+#progressbar3::after {
+  content: "40%"; /* Match this with the width percentage */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#progressbar4 {
+  background-color: var(--success-color);
+  height: 100%;
+  width: 80%;
+  border-radius: 12px;
+  animation: progressbar4 4s forwards;
+  transition: background-color 0.3s;
+}
+#progressbar4:hover {
+  background-color: var(--senary-color);
+}
+@keyframes progressbar4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 87%;
+  }
+}
+
+#progressbar4::after {
+  content: "87%"; /* Match this with the width percentage */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#progressbar5 {
+  background-color: var(--success-color);
+  height: 100%;
+  width: 80%;
+  border-radius: 12px;
+  animation: progressbar5 4s forwards;
+  transition: background-color 0.3s;
+}
+#progressbar5:hover {
+  background-color: var(--senary-color);
+}
+@keyframes progressbar5 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#progressbar5::after {
+  content: "100%"; /* Match this with the width percentage */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 25%;
+  padding: 20px;
+}
+
+.main {
+  flex: 1;
+  pad: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .row {
+    display: flex;
+
+    flex-direction: row;
+  }
+  .sidebar {
+    flex: 0 0 25%;
+  }
+  .main {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    flex-direction: column;
+  }
+  .sidebar,
+  .main {
+    flex: 1 0 100%;
+  }
+
+  .sidebar {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+}

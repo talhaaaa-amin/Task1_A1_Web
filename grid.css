@@ -1,0 +1,157 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 10px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 120px;
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.cardcontainer {
+  padding: 2px 10px;
+}
+
+.mygrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .cardcontainer {
+    padding: 20px;
+  }
+  .mygrid {
+    gap: 24px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.loading {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+/* Outer & inner shadow */
+.outer-shadow,
+.inner-shadow {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.inner-shadow {
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Two halves */
+.hold {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0px, 80px, 80px, 40px);
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 40px, 80px, 0px);
+  background-color: #f50;
+}
+
+/* Left half always does 180° */
+.left .fill {
+  z-index: 1;
+  animation: left 1s linear both;
+}
+
+@keyframes left {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+/* Right half */
+.right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+/* --- Specific percentages --- */
+/* C++ (90% => 324deg => right side 144deg) */
+#cpp .right .fill {
+  animation: right90 1s linear both;
+  animation-delay: 1s;
+}
+
+@keyframes right90 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(144deg);
+  }
+}
+
+/* Python (75% => 270deg => right side 90deg) */
+#python .right .fill {
+  animation: right75 1s linear both;
+  animation-delay: 1s;
+}
+
+@keyframes right75 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
